@@ -36,6 +36,7 @@ public class AccessFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         logger.info("send {}  request to {}" , request.getMethod(),request.getRequestURI().toString());
+        logger.info(request.getRequestURI().toString().indexOf("/book/")+"" );
         return null;
     }
 }
